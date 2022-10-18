@@ -20,7 +20,7 @@ class Song(models.Model):
     likes = models.IntegerField(default=0)
 
     def __str__(self):
-        return f"{self.name} by {self.artist}"
+        return f"{self.name}"
 
     
 class Lyric(models.Model):
