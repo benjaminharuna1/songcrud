@@ -1,4 +1,5 @@
 from django.db import models
+from tinymce.models import HTMLField
 
 
 # Create your models here.
@@ -24,7 +25,7 @@ class Song(models.Model):
 
     
 class Lyric(models.Model):
-    content = models.TextField()
+    content = HTMLField()
     song_id = models.ForeignKey(Song, on_delete=models.CASCADE)
     artist = models.ForeignKey(Artist, on_delete=models.CASCADE)
 
